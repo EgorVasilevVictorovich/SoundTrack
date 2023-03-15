@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="ПРИЛОЖЕНИЕ ПЛЕЕР"
+        android:textColor="#B55807"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textOut"
+        android:layout_width="385dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="21dp"
+        android:background="#FFF4CD"
+        android:gravity="center"
+        android:hint="Название мелодии"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:textSize="19sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ИСТОЧНИК"
+        android:textColor="#000"
+        android:textSize="19sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.677"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <Button
+            android:id="@+id/btnStream11"
+            android:layout_width="184dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#80FF"
+            android:onClick="onClickSource"
+            android:text="Интернет"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnRAW"
+            android:layout_width="185dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#80FF"
+            android:onClick="onClickSource"
+            android:text="Телефон"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnResume"
+        android:layout_width="154dp"
+        android:layout_height="44dp"
+        android:backgroundTint="#00FF00"
+        android:onClick="onClick"
+        android:padding="14dp"
+        android:text="ВОСПРОИЗВЕСТИ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="104dp"
+        android:layout_height="44dp"
+        android:backgroundTint="#FFFF00"
+        android:onClick="onClick"
+        android:padding="14dp"
+        android:text="ПАУЗА"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="125dp"
+        android:layout_height="44dp"
+        android:backgroundTint="#ff0000"
+        android:onClick="onClick"
+        android:padding="14dp"
+        android:text="СТОП"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="177dp"
+        android:layout_height="43dp"
+        android:backgroundTint="#006400"
+        android:onClick="onClick"
+        android:padding="14dp"
+        android:text="НАЗАД"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.375" />
+
+    <Button
+        android:id="@+id/btnForward"
+        android:layout_width="186dp"
+        android:layout_height="44dp"
+        android:backgroundTint="#006400"
+        android:onClick="onClick"
+        android:padding="14dp"
+        android:text="ВПЕРЁД"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.374" />
+
+    <Switch
+        android:id="@+id/switchLoop"
+        android:layout_width="373dp"
+        android:layout_height="46dp"
+        android:background="#FFFF00"
+        android:padding="14dp"
+        android:text="ПОВТОР"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.461"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/radio1"
+        android:layout_width="176dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#00FF00"
+        android:onClick="onClickSource"
+        android:padding="14dp"
+        android:text="Радио 1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <Button
+        android:id="@+id/radio2"
+        android:layout_width="177dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#00FF00"
+        android:onClick="onClickSource"
+        android:padding="14dp"
+        android:text="Радио 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.738" />
+
+    <Button
+        android:id="@+id/radio3"
+        android:layout_width="179dp"
+        android:layout_height="44dp"
+        android:backgroundTint="#00FF00"
+        android:onClick="onClickSource"
+        android:padding="14dp"
+        android:text="Радио 3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.804" />
+
+    <Button
+        android:id="@+id/radio4"
+        android:layout_width="179dp"
+        android:layout_height="49dp"
+        android:backgroundTint="#00FF00"
+        android:onClick="onClickSource"
+        android:padding="14dp"
+        android:text="Радио 4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.884" />
+
+    <Button
+        android:id="@+id/btnStream"
+        android:layout_width="179dp"
+        android:layout_height="49dp"
+        android:backgroundTint="#00FF00"
+        android:onClick="onClickSource"
+        android:padding="14dp"
+        android:text="Радио 5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.956" />
+
+
+</android.support.constraint.ConstraintLayout>
